@@ -136,13 +136,17 @@ progressBackgroundColor:(UIColor *)progressBackgroundColor
 
 - (void)setPercentage:(CGFloat)percentage
 {
+    _showInvalid = NO;
     _percentage = fminf(fmax(percentage, 0), 1);
-    if (percentage == -1) { // no data
-        _centerLabel.text = @"–";
-    } else {
-        _centerLabel.text = [NSString stringWithFormat:@"%.0f", percentage*100.0f];
-    }
+    _centerLabel.text = [NSString stringWithFormat:@"%.0f", _percentage*100.0f];
     [self setNeedsDisplay];
+}
+
+- (void) setShowInvalid:(BOOL)invalid;
+{
+    if (invalid) {
+        _centerLabel.text = @"–";
+    }
 }
 
 - (void) setIsLabelVisible:(BOOL)isLabelVisible;
