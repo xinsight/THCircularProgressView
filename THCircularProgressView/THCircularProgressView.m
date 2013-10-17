@@ -145,7 +145,9 @@ progressBackgroundColor:(UIColor *)progressBackgroundColor
 - (void) setIsInvalid:(BOOL)invalid;
 {
     if (invalid) {
+        _percentage = 0.0f;
         _centerLabel.text = @"–";
+        [self setNeedsDisplay];
     }
 }
 
