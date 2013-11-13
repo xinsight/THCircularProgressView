@@ -30,8 +30,8 @@
     
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
-    CGFloat radius = width / 4 * 0.8;
-    
+    CGFloat radius = floor(width / 4 * 0.8);
+
     THCircularProgressView *example1 = [[THCircularProgressView alloc] initWithCenter:CGPointMake(width * .25, height * .25)
                                                                                radius:radius
                                                                             lineWidth:10.0f
