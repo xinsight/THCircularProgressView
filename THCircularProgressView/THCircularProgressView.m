@@ -69,7 +69,18 @@
         self.progressBackgroundColor = progressBackgroundColor;
         
         self.percentage = percentage;
+<<<<<<< HEAD
 
+=======
+        
+        self.centerLabel = [[UILabel alloc] initWithFrame:rect];
+        self.centerLabel.center = CGPointMake(radius, radius);
+        self.centerLabel.textAlignment = NSTextAlignmentCenter;
+        self.centerLabel.backgroundColor = [UIColor clearColor];
+        self.centerLabelVisible = NO;
+        
+        [self addSubview:self.centerLabel];
+>>>>>>> 7b0a4c4f38c290f4f090c873f3e466fae6054c8f
     }
     
     return self;
@@ -203,14 +214,14 @@
     }
 }
 
-- (BOOL) isLabelVisible;
+- (void)setCenterLabelVisible:(BOOL)centerLabelVisible
 {
-    return (self.centerLabel.hidden == NO);
+    self.centerLabel.hidden = !centerLabelVisible;
 }
 
-- (void) setIsLabelVisible:(BOOL)isLabelVisible;
+- (BOOL)centerLabelVisible
 {
-    self.centerLabel.hidden = !isLabelVisible;
+    return !self.centerLabel.hidden;
 }
 
 @end
