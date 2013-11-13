@@ -48,7 +48,7 @@
     example2.lineWidth = 30.0f;
     example2.progressColor = [UIColor greenColor];
     example2.centerLabel.font = [UIFont boldSystemFontOfSize:radius];
-    example2.isLabelVisible = YES;
+    example2.centerLabelVisible = YES;
     [self.view addSubview:example2];
     [self.examples addObject:example2];
     

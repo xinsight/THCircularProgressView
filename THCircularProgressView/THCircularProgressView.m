@@ -36,12 +36,11 @@
         label.adjustsFontSizeToFitWidth = YES;
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         self.centerLabel = label;
-        self.isLabelVisible = NO;
+        self.centerLabelVisible = NO;
+        [self addSubview:self.centerLabel];
         
         self.contentMode = UIViewContentModeRedraw;
         
-        [self addSubview:self.centerLabel];
-
     }
  
     return self;
@@ -60,27 +59,12 @@
     
     self = [self initWithFrame:rect];
     if (self) {
- 
         self.lineWidth = lineWidth;
-        
         self.progressMode = progressMode;
         self.progressColor = progressColor;
         self.progressBackgroundMode = backgroundMode;
         self.progressBackgroundColor = progressBackgroundColor;
-        
         self.percentage = percentage;
-<<<<<<< HEAD
-
-=======
-        
-        self.centerLabel = [[UILabel alloc] initWithFrame:rect];
-        self.centerLabel.center = CGPointMake(radius, radius);
-        self.centerLabel.textAlignment = NSTextAlignmentCenter;
-        self.centerLabel.backgroundColor = [UIColor clearColor];
-        self.centerLabelVisible = NO;
-        
-        [self addSubview:self.centerLabel];
->>>>>>> 7b0a4c4f38c290f4f090c873f3e466fae6054c8f
     }
     
     return self;
@@ -94,7 +78,7 @@
     CGFloat scale = w/oldFrameWidth;
     if (scale != 1.0) {
         _lineWidth *= scale;
-        if (self.isLabelVisible) {
+        if (self.centerLabelVisible) {
             CGFloat pointSize = self.centerLabel.font.pointSize * scale;
             UIFont *font = [UIFont fontWithName:self.centerLabel.font.fontName size:pointSize];
             self.centerLabel.font = font;
