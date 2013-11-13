@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, THProgressMode) {
 @property (nonatomic, strong) UIColor *progressBackgroundColor;
 @property (nonatomic) THProgressMode progressMode;
 @property (nonatomic) THProgressBackgroundMode progressBackgroundMode;
+@property (nonatomic) BOOL clockwise;
 @property (nonatomic) BOOL centerLabelVisible;
 @property (nonatomic) BOOL isInvalid;
 
