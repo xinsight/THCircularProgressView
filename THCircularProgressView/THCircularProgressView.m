@@ -151,6 +151,11 @@ progressBackgroundColor:(UIColor *)progressBackgroundColor
     }
 }
 
+- (BOOL) isLabelVisible;
+{
+    return (self.centerLabel.hidden == NO);
+}
+
 - (void) setIsLabelVisible:(BOOL)isLabelVisible;
 {
     self.centerLabel.hidden = !isLabelVisible;
