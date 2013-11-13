@@ -9,18 +9,16 @@
 
 #pragma mark - Enums
 
-typedef enum
-{
+typedef NS_ENUM(NSUInteger, THProgressBackgroundMode) {
     THProgressBackgroundModeNone,
     THProgressBackgroundModeCircle,
     THProgressBackgroundModeCircumference
-} THProgressBackgroundMode;
+};
 
-typedef enum
-{
+typedef NS_ENUM(NSUInteger, THProgressMode) {
     THProgressModeFill,
     THProgressModeDeplete
-} THProgressMode;
+};
 
 #pragma mark - Interface
 
@@ -31,8 +29,8 @@ typedef enum
 @property (nonatomic, strong) UILabel *centerLabel;
 @property (nonatomic, strong) UIColor *progressColor;
 @property (nonatomic, strong) UIColor *progressBackgroundColor;
-@property THProgressMode progressMode;
-@property THProgressBackgroundMode progressBackgroundMode;
+@property (nonatomic) THProgressMode progressMode;
+@property (nonatomic) THProgressBackgroundMode progressBackgroundMode;
 @property (nonatomic) BOOL isLabelVisible;
 @property (nonatomic) BOOL isInvalid;
 
