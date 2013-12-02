@@ -38,10 +38,11 @@
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         self.centerLabel = label;
         self.centerLabelVisible = NO;
-        [self addSubview:self.centerLabel];
         
         self.contentMode = UIViewContentModeRedraw;
         
+        [self addSubview:self.centerLabel];
+
     }
  
     return self;
@@ -71,7 +72,8 @@
     return self;
 }
 
-- (void)layoutSubviews {
+- (void)layoutSubviews
+{
     [super layoutSubviews];
     
     // scale linewidth and font to match new size

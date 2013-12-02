@@ -30,10 +30,10 @@ typedef NS_ENUM(NSUInteger, THProgressMode) {
 @property (nonatomic, strong) UILabel *centerLabel;
 @property (nonatomic, strong) UIColor *progressColor;
 @property (nonatomic, strong) UIColor *progressBackgroundColor;
+@property (nonatomic) BOOL centerLabelVisible;
 @property (nonatomic) THProgressMode progressMode;
 @property (nonatomic) THProgressBackgroundMode progressBackgroundMode;
 @property (nonatomic) BOOL clockwise;
-@property (nonatomic) BOOL centerLabelVisible;
 @property (nonatomic) BOOL isInvalid;
 
 - (id)initWithCenter:(CGPoint)center
